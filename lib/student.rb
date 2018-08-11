@@ -10,20 +10,13 @@ class Student
   end
 
   def self.create_from_collection(students_array)
-
-    # student = students_array.each_slice(1).to_a
-    # students_array[0]
-    # students_array.each do |person| 
-    #   person.each do |k, v| 
-        
-    #     "#{v}"
     students_array.each do |s| 
       Student.new(s)
     end
   end
 
   def add_student_attributes(attributes_hash)
-    # binding.pry
+    binding.pry
     # attributes_hash.each { |a| a[:bio]="newvalue" unless a.include? :bio}
       # results.each {|h| h[:c]="newvalue" unless h.include? :c}
       attributes_hash.each {|a| @@all << a}
