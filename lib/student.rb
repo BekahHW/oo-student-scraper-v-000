@@ -23,9 +23,7 @@ class Student
     #     "#{v}"
     students_array.each do |s| 
       Student.new(s)
-end
-
-    
+    end
   end
 
   def add_student_attributes(attributes_hash)
