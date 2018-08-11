@@ -13,15 +13,9 @@ class Student
     students_array.each do |s| 
       Student.new(s)
     end
-  end
-  # attributes_hash.each do |attr, value|
-  #     self.send("#{attr}=", value)
-  #   end
-  #   self
+end
 
   def add_student_attributes(attributes_hash)
-    # attributes_hash.each { |a| a[:bio]="newvalue" unless a.include? :bio}
-      # results.each {|h| h[:c]="newvalue" unless h.include? :c}
       attributes_hash.each {|k, v| self.send(("#{k}="), v)}
   end
 
