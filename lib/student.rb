@@ -9,10 +9,6 @@ class Student
     @@all << self
   end
 
-# expect{Student.new({:name => "Sophie DeBenedetto", :location => "Brooklyn, NY"})}.to_not raise_error
-#       expect(student.name).to eq("Alex Patriquin")
-#       expect(student.location).to eq("New York, NY")
-
   def self.create_from_collection(students_array)
 
     # student = students_array.each_slice(1).to_a
@@ -27,6 +23,7 @@ class Student
   end
 
   def add_student_attributes(attributes_hash)
+    binding.pry
     attributes_hash.each { |a| a[:bio]="newvalue" unless a.include? :bio}
       # results.each {|h| h[:c]="newvalue" unless h.include? :c}
   end
