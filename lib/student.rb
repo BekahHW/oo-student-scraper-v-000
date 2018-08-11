@@ -24,8 +24,9 @@ class Student
 
   def add_student_attributes(attributes_hash)
     binding.pry
-    attributes_hash.each { |a| a[:bio]="newvalue" unless a.include? :bio}
+    # attributes_hash.each { |a| a[:bio]="newvalue" unless a.include? :bio}
       # results.each {|h| h[:c]="newvalue" unless h.include? :c}
+      attributes_hash.each {|a| @@all << a}
   end
 
   def self.all
