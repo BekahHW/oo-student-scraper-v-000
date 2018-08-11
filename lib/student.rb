@@ -22,7 +22,7 @@ class Student
         
     #     "#{v}"
     students_array.each do |s| 
-      
+      Student.new(s)
 binding.pry
 put :name
     
