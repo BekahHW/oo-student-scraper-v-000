@@ -14,16 +14,16 @@ class Student
       Student.new(s)
     end
   end
-   attributes_hash.each do |attr, value|
-      self.send("#{attr}=", value)
-    end
-    self
+  # attributes_hash.each do |attr, value|
+  #     self.send("#{attr}=", value)
+  #   end
+  #   self
 
   def add_student_attributes(attributes_hash)
     binding.pry
     # attributes_hash.each { |a| a[:bio]="newvalue" unless a.include? :bio}
       # results.each {|h| h[:c]="newvalue" unless h.include? :c}
-      attributes_hash.each {|k, v| Student.add(a)}
+      attributes_hash.each {|k, v| self.send(("#{k}="), v)}
   end
 
   def self.all
